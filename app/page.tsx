@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
+import "@/styles/landingPage.css"
 
 // --- ICONS ---
 const CheckCircleIcon = ({ className }: { className?: string }) => (
@@ -100,7 +101,7 @@ const FaqItem = ({
   );
 };
 
-export default function Home() {
+export default function LandingPage() {
   return (
     <div className="min-h-screen bg-stone-50 font-sans text-stone-600">
       {/* --- NAVBAR --- */}
