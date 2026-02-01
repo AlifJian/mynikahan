@@ -1,3 +1,9 @@
 .grid-cols-30-70 {
-    grid-template-columns: 30% 70%;
+  grid-template-columns: 30% 70%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }

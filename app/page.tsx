@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import "@/styles/landingPage.css"
+import "@/styles/landingPage.css";
 
 // --- ICONS ---
 const CheckCircleIcon = ({ className }: { className?: string }) => (
@@ -294,6 +294,29 @@ export default function LandingPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Theme Card 3 - Minimal */}
+            <a href="/template1">
+              <div className="group rounded-2xl bg-white p-3 shadow-sm hover:shadow-xl transition duration-300 ring-1 ring-stone-100 hover:ring-rose-200">
+                <div className="h-72 rounded-xl bg-stone-200 overflow-hidden relative">
+                  <img
+                    src="/LandingPage_Theme.png"
+                    className="w-full h-full object-cover opacity-90 transition transform group-hover:scale-105"
+                    alt="Minimal Theme"
+                  />
+                  <div className="absolute top-3 right-3 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-stone-600">
+                    MODERN
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-stone-800 text-xl">
+                    Elegant Minimalist
+                  </h3>
+                  <p className="text-sm text-stone-500 mt-2">
+                    Simpel, bersih, fokus pada tipografi yang indah.
+                  </p>
+                </div>
+              </div>
+            </a>
             {/* Theme Card 1 - Maroon Vibe */}
             <div className="group rounded-2xl bg-white p-3 shadow-sm hover:shadow-xl transition duration-300 ring-1 ring-stone-100 hover:ring-rose-200">
               <div className="h-72 rounded-xl bg-rose-900 overflow-hidden relative">
@@ -334,28 +357,6 @@ export default function LandingPage() {
                 </h3>
                 <p className="text-sm text-stone-500 mt-2">
                   Sentuhan bunga-bunga lembut yang romantis.
-                </p>
-              </div>
-            </div>
-
-            {/* Theme Card 3 - Minimal */}
-            <div className="group rounded-2xl bg-white p-3 shadow-sm hover:shadow-xl transition duration-300 ring-1 ring-stone-100 hover:ring-rose-200">
-              <div className="h-72 rounded-xl bg-stone-200 overflow-hidden relative">
-                <img
-                  src="https://images.unsplash.com/photo-1605209268822-34940f7fb8f9?auto=format&fit=crop&w=500&q=60"
-                  className="w-full h-full object-cover opacity-90 transition transform group-hover:scale-105"
-                  alt="Minimal Theme"
-                />
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-stone-600">
-                  MODERN
-                </div>
-              </div>
-              <div className="p-5">
-                <h3 className="font-bold text-stone-800 text-xl">
-                  Elegant Minimalist
-                </h3>
-                <p className="text-sm text-stone-500 mt-2">
-                  Simpel, bersih, fokus pada tipografi yang indah.
                 </p>
               </div>
             </div>
