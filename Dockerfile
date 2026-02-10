@@ -38,13 +38,18 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+# Install su-exec for dropping privileges in entrypoint
+RUN apk add --no-cache su-exec
+
 # Create data directory as a mount point
 RUN mkdir -p /app/data && chown nextjs:nodejs /app/data
 
-USER nextjs
+# Copy entrypoint script
+COPY --chmod=755 docker-entrypoint.sh /app/docker-entrypoint.sh
 
 EXPOSE 3000
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
-CMD ["node", "server.js"]
+# Run as root so entrypoint can fix permissions, then drops to nextjs
+ENTRYPOINT ["/app/docker-entrypoint.sh"]
