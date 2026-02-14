@@ -16,7 +16,7 @@ export default async function PengantinTemplate1() {
         </div>
         <div className="aspect-square relative">
             <Image
-          src={"/template1/mempelaiwanita.png"}
+          src={"/template1/mempelaiWanita.png"}
           alt={"Mempelai Wanita"}
           width={300}
           height={300}
@@ -28,7 +28,7 @@ export default async function PengantinTemplate1() {
       <div className="flex justify-around items-center">
         <div className="aspect-square relative">
           <Image
-            src={"/template1/mempelaipria.png"}
+            src={"/template1/mempelaiPria.png"}
             alt={"Mempelai Pria"}
             width={300}
             height={300}
