@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default async function JumbotronTemplate1() {
   return (
-      <section className="p-4 grid grid-cols-30-70 h-lvh bg-[url('/Template1_bg1.jpg')] bg-no-repeat bg-center bg-cover">
+      <section className="p-4 grid grid-cols-30-70 h-lvh">
         <div className="flex justify-center">
           <div className="flex flex-col">
             <Rose className="text-red-500 size-12" />
@@ -13,7 +13,7 @@ export default async function JumbotronTemplate1() {
             <h1 className="text-[63px] mt-9 font-bold font-serif">
               <span>Doni</span>
               <br />
-              <span>& Rudi</span>
+              <span>& Septi</span>
             </h1>
             <h1 className="mt-12 font-sans">
               Dear Sir/Madam <br />
@@ -25,13 +25,13 @@ export default async function JumbotronTemplate1() {
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="h-125 w-175 overflow-hidden mt-9">
+          <div className="h-125 w-175 overflow-hidden mt-9 bg-[url('/template1/bg1.jpg')] bg-no-repeat bg-center bg-cover rounded-tl-[100px] rounded-xl shadow-2xl">
             <Image
-              src={"/Template1_wedding1.jpg"}
+              src={"/template1/wedding.png"}
               alt={"Mempelai"}
               width={700}
               height={500}
-              className="rounded-tl-[100px] object-cover object-[50%_-120px] "
+              className="object-cover object-[50%_-120px] "
             />
           </div>
         </div>
